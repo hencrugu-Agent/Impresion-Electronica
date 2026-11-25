@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "Impresion electronica"
     steps:
       - uses: actions/checkout@v4
 
@@ -28,4 +31,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: app-impresora-48mm-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: "Impresion electronica/build/app/outputs/flutter-apk/app-release.apk"
